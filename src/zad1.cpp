@@ -40,8 +40,7 @@ int main() {
     std::ranges::sort(suma, std::ranges::greater());
     auto top_3_view = suma | std::views::take(3);
 
-    // std::accumulate bierze nasz widok i dodaje wszystkie liczby do siebie, zaczynając od 0.
-    // 0LL oznacza, że zero jest typu "long long".
+    //sumowanie
     int top_3 = std::accumulate(top_3_view.begin(), top_3_view.end(), 0);   
 
     std::cout << "max kalorii: " << max_kalorii << std::endl;
